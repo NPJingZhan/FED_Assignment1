@@ -1,0 +1,72 @@
+@font-face {
+    src: url(fonts/Limelight-Regular.ttf);
+    font-family: limelight;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+nav {
+    position: sticky;
+    background-color: rgb(177, 177, 132);
+    width: 100%;
+    top: 0px;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    background-color: rgb(177, 177, 132);
+    overflow: hidden;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 40px;
+    display: block;
+}
+
+nav li{
+    float: left;
+    font-size: 20px;
+}
+
+header{
+    position: relative;
+    z-index: -1;
+}
+
+header img{
+    width: 100%;
+    object-fit: cover;
+}
+
+header div{
+    position: absolute;
+    top: 25%;
+    background-color: hsla(0, 0%, 100%, 0.452);
+    backdrop-filter: blur(2px);
+    width: 100%;
+    font-family: limelight;
+    text-align: center;
+    line-height: 30px;
+    padding: 35px;
+}
+
+header div h1{
+    font-size: 100px;  
+    color: black;
+}
+
+
+

@@ -1,0 +1,12 @@
+.leftsidebar {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
