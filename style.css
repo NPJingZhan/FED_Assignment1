@@ -27,14 +27,17 @@ nav ul{
     margin: 0;
     background-color: rgb(177, 177, 132);
     overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 nav a{
     text-decoration: none;
     color: white;
-    padding: 40px;
+    padding: 20px;
     display: block;
 }
+
 
 nav li{
     float: left;
