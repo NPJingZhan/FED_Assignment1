@@ -12,64 +12,70 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
+    background-color: black;
+    color: white;
 }
 
-nav {
-    position: sticky;
-    background-color: rgb(177, 177, 132);
+header {
+    position: sticky;   
     width: 100%;
-    top: 0px;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: black;
+    z-index: 1000;
 }
 
 nav ul{
     list-style-type: none;
-    margin: 0;
-    background-color: rgb(177, 177, 132);
-    overflow: hidden;
-    display: flex;
-    justify-content: space-evenly;
+    display : flex;
+    padding: 17px;
 }
 
 nav a{
     text-decoration: none;
     color: white;
-    padding: 20px;
-    display: block;
+    padding-left: 17px;
+    padding-right: 17px;
 }
 
 
-nav li{
-    float: left;
-    font-size: 20px;
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 20px;
 }
 
-header{
+/* Ensure the body takes up the full viewport height */
+
+/* #cover settings */
+#cover {
     position: relative;
-    z-index: -1;
+    height: 80vh;
+    width: 80vw;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-header img{
-    width: 100%;
-    object-fit: cover;
+#cover img {
+    height: auto;
+    width: auto;
+    object-fit: contain;
 }
 
-header div{
+#cover .content {
     position: absolute;
-    top: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: hsla(0, 0%, 100%, 0.452);
     backdrop-filter: blur(2px);
-    width: 100%;
-    font-family: limelight;
+    font-family: 'Limelight', cursive;
     text-align: center;
-    line-height: 30px;
+    line-height: 100%;
     padding: 35px;
+    width: 100%;
 }
-
-header div h1{
-    font-size: 100px;  
-    color: black;
-}
-
-
-
