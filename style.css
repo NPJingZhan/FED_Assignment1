@@ -48,6 +48,9 @@ header nav ul {
 
 nav{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav a {
@@ -60,7 +63,7 @@ nav a {
     transition: color 0.3s ease-in-out;
 }
 
-nav ul li a img {
+nav img {
     width: 3em;
     height: 3em;
 }
@@ -84,6 +87,7 @@ main {
 main img {
     width: 100vw;
     height: auto;
+    padding-top: 2em;
 }
 
 h1 {
@@ -148,6 +152,7 @@ header ul li {
 }
 
 .layer img {
+    padding: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -191,7 +196,7 @@ header ul li {
 }
 
 .contact-button:hover {
-    background-color: rgb(204, 167, 0);
+    background-color: rgb(184, 104, 0);
     transform: scale(1.05);
     border-style: solid;
     border-color: black;
@@ -219,7 +224,6 @@ header ul li {
     list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: left;
     text-align: left;
     padding: 0.3em;
 }
@@ -301,6 +305,80 @@ header ul li {
     padding: 0.3em;
 }
 
+/* Teams Section Styling */
+#teams {
+    padding: 2em 0;
+    text-align: center;
+}
+
+/* Style for the table itself */
+#teams table {
+    margin: 0 auto;  /* Center the table horizontally */
+    width: 90%;  /* Adjust width as needed */
+    border-collapse: collapse;
+}
+
+/* Table Header Styling */
+#teams th {
+    text-align: left;  /* Align headers to the left */
+    padding: 0.8em;
+    background-color: #212121;
+    color: white;
+    font-size: 1.2em;
+    border: 2px solid #444;
+}
+
+/* Table Data Styling */
+#teams td {
+    text-align: left;  /* Align text in table rows to the left */
+    padding: 0.8em;
+    border-bottom: 1px solid #444;
+    font-size: 1em;
+    border: 2px solid #444;
+}
+
+/* About M6 Styling */
+#aboutm6 {
+    padding: 2em 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+#aboutm6 img {
+    width: 100%;
+    height: auto;
+    object-fit: fit;
+    padding: 1em;
+}
+
+#aboutm6 p {
+    padding: 0.5em 0;
+}
+
+#aboutm6 h2 {
+    padding: 0.5em 0;
+    align-items: flex-start;
+}
+
+.champs {
+    width: 100%;
+    padding: 1em 0;
+}
+
+.champs img {
+    margin: 0 auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+.champs h2 {
+    margin-top: 1em;
+}
+
+
 
 /* Footer Styling */
 footer {
@@ -324,27 +402,124 @@ footer a:hover {
     color: #ffa31a;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 1em;
-    }
-
-    .container {
-        flex-direction: column;
-    }
-
-    .content {
-        flex: 1 1 100%;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
+/* Contact Us Section Styling */
+#contact {
+    padding: 5em 2em;
+    background-color: #121212;
+    color: white;
+    text-align: center;
 }
+
+#contact h1 {
+    font-family: 'limelight';
+    font-size: 2.5em;
+    color: #ffcc00;
+    margin-bottom: 1em;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    color: #ddd;
+}
+
+
+/* Form Styling */
+#contactForm {
+    background-color: #212121;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+    margin: 2em auto;
+}
+
+#contactForm h2 {
+    font-size: 1.8em;
+    color: #ffa31a;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+#contactForm label {
+    display: block;
+    text-align: left;
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+    color: white;
+}
+
+#contactForm input,
+#contactForm select,
+#contactForm textarea,
+#contactForm button {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 2px solid #444;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #121212;
+    color: white;
+}
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+    color: #888;
+}
+
+#contactForm input:focus,
+#contactForm select:focus,
+#contactForm textarea:focus {
+    border-color: #ffcc00;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.8);
+}
+
+#contactForm button {
+    background-color: #ffcc00;
+    color: black;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#contactForm button:hover {
+    background-color: #ffa31a;
+    transform: scale(1.05);
+}
+
+#contactForm button:active {
+    transform: scale(1);
+}
+
+#toggleButtons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.toggle-button {
+    background-color: #444;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button.active {
+    background-color: #ffcc00;
+    color: black;
+}
+
+.toggle-button:hover {
+    background-color: #ffa31a;
+}
+
+

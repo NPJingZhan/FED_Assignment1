@@ -4,8 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <main>
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <p>Toggle between general inquiries and business tournament requests below:</p>
+        
+            <!-- Toggle Buttons -->
+            <div id="toggleButtons">
+                <button class="toggle-button active" id="generalToggle">General Inquiry</button>
+                <button class="toggle-button" id="businessToggle">Host a Tournament</button>
+            </div>
+        
+            <!-- Single Form -->
+            <form id="contactForm">
+                <h2 id="formTitle">General Inquiry</h2>
+        
+                <!-- General Inquiry Fields -->
+                <div class="form-section" id="generalFields">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+                </div>
+        
+                <!-- Business Fields -->
+                <div class="form-section" id="businessFields" style="display: none;">
+                    <label for="companyName">Company Name</label>
+                    <input type="text" id="companyName" name="companyName" placeholder="Enter your company name" required>
+                    
+                    <label for="contactPerson">Contact Person</label>
+                    <input type="text" id="contactPerson" name="contactPerson" placeholder="Enter contact person's name" required>
+                    
+                    <label for="tournamentDetails">Tournament Details</label>
+                    <textarea id="tournamentDetails" name="tournamentDetails" rows="5" placeholder="Provide tournament details" required></textarea>
+                    
+                    <label for="region">Region</label>
+                    <select id="region" name="region" required>
+                        <option value="North America">North America</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Asia">Asia</option>
+                        <option value="South America">South America</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Africa">Africa</option>
+                    </select>
+                    
+                    <label for="eventDate">Proposed Event Date</label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+                </div>
+        
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+
+        <!-- International Offices Section -->
+        <section id="offices">
+            <h2>Our Offices Around the World</h2>
+            <div>
+                <h3>North America</h3>
+                <p>123 Gaming Lane, Los Angeles, CA, USA</p>
+                <p>456 Play Street, Toronto, ON, Canada</p>
+            </div>
+            <div>
+                <h3>Europe</h3>
+                <p>789 Esports Blvd, London, UK</p>
+                <p>321 Gamer Avenue, Berlin, Germany</p>
+            </div>
+            <div>
+                <h3>Asia</h3>
+                <p>101 Competition Road, Seoul, South Korea</p>
+                <p>202 Battle Plaza, Tokyo, Japan</p>
+            </div>
+            <div>
+                <h3>South America</h3>
+                <p>303 Victory Way, São Paulo, Brazil</p>
+            </div>
+            <div>
+                <h3>Africa</h3>
+                <p>404 Champion Street, Cape Town, South Africa</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 GameWorks Esports. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:info@gameworks.com">info@gameworks.com</a></p>
+        <p>Follow us on: 
+            <a href="#">Twitter</a> | 
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+    <script src="contact.js"></script>
 </body>
 </html>
