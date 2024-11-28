@@ -72,6 +72,66 @@ nav a:hover {
     color: #ffcc00;
 }
 
+.menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.menu p {
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+    padding-right: 20px; /* Space for the arrow */
+    cursor: pointer;
+}
+
+/* Chevron arrow for dropdown indication */
+.menu p::after {
+    content: "▼";
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+.submenu {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    background-color: #423636;
+    padding: 1em;
+    border-color: #121212;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    z-index: 1;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for show */
+}
+
+/* Menu hover effect for showing submenu */
+.menu:hover .submenu {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+    transition-delay: 0s;  /* Ensure no delay when showing */
+}
+
+/* Menu active state for hiding instantly */
+.menu.active .submenu {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px); /* Keep it hidden */
+    transition-delay: 0s; /* No transition when hiding */
+}
+
+
+
 /* Main Content Styling */
 main {
     padding: 2em;
@@ -135,7 +195,7 @@ header ul li {
     position: relative;
     display: flex;
     flex-direction: row;
-    height: 60vh;
+    height: auto;
     width: 100vw;
     z-index: 1;
     padding: 0 1.5em;
@@ -337,6 +397,51 @@ header ul li {
     border: 2px solid #444;
 }
 
+/* Schedule Section Styling */
+/* Styling for the Schedule Section */
+#schedule {
+    padding: 20px;
+    color: #333; /* Dark text for contrast */
+    border-radius: 8px; /* Soft corners for a modern look */
+    width: 100%;
+}
+
+#schedule h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.round {
+    margin: 2em 0;
+}
+
+.round h3 {
+    margin: 1em 0;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+table th, table td {
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd; /* Light gray border for table */
+    font-size: 1.5rem;
+    width: 33%;
+}
+
+#schedule p {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+    color: white;
+}
+
 /* About M6 Styling */
 #aboutm6 {
     padding: 2em 0;
@@ -415,6 +520,7 @@ footer a:hover {
     width: 10em;
     height: auto;
     padding: 1em;
+    margin: 0 auto;
 }
 
 #contact h1 {
@@ -457,6 +563,18 @@ footer a:hover {
     color: white;
 }
 
+#contactForm .name{
+    display: flex;
+    gap: 1em;
+}
+
+#contactForm .name .firstname{
+    width: 40%;
+}
+
+#contactForm .name .lastname{
+    width: 60%;
+}
 #contactForm input,
 #contactForm select,
 #contactForm textarea,
@@ -469,6 +587,7 @@ footer a:hover {
     font-size: 1em;
     background-color: #121212;
     color: white;
+    resize: none;
 }
 
 #contactForm input::placeholder,
@@ -482,6 +601,7 @@ footer a:hover {
     border-color: #ffcc00;
     outline: none;
     box-shadow: 0 0 5px rgba(255, 204, 0, 0.8);
+    
 }
 
 #contactForm button {
@@ -512,12 +632,22 @@ footer a:hover {
     background-color: #444;
     color: white;
     padding: 10px 20px;
-    margin: 0 5px;
-    border-radius: 5px;
+    margin: 0;
     cursor: pointer;
     border: none;
     font-size: 1em;
     transition: background-color 0.3s ease;
+}
+
+#generalToggle {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+#businessToggle {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .toggle-button.active {
@@ -526,7 +656,13 @@ footer a:hover {
 }
 
 .toggle-button:hover {
-    background-color: #ffa31a;
+    background-color: #dd8e18;
 }
 
-
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: #ffcc00;
+    color: black; 
+    border-radius: 50%; 
+    padding: 0.2em; 
+    cursor: pointer;
+}

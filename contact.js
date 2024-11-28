@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const generalFields = document.getElementById("generalFields");
     const businessFields = document.getElementById("businessFields");
 
-    // Event listeners for toggling
     generalToggle.addEventListener("click", () => {
         formTitle.textContent = "General Inquiry";
         generalFields.style.display = "block";
