@@ -49,4 +49,3 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     adjustTextSize();
     window.addEventListener("resize", adjustTextSize);
 });
-

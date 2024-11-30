@@ -17,6 +17,12 @@ html {
     scroll-behavior: smooth;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: black;
@@ -31,7 +37,7 @@ body {
 /* Header Styling */
 header {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     background-color: #212121;
     padding: 1em 2em;
     display: flex;
@@ -365,6 +371,11 @@ iframe{
 }
 
 /* Teams Section Styling */
+#teams {
+    padding: 2em 0;;
+    text-align: center;
+}
+
 #teams table {
     margin: 0 auto;
     width: 100%;
@@ -376,7 +387,8 @@ iframe{
     text-align: left;
     padding: 1em;
     border: 1px solid #333;
-    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #teams th {
@@ -395,7 +407,6 @@ iframe{
     color: white;
     border: 1px solid #444;
 }
-
 
 /* Schedule Section Styling */
 #schedule {
@@ -423,6 +434,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 10px 0;
+    table-layout: fixed;
 }
 
 table th, table td {
@@ -532,6 +544,7 @@ footer {
     text-align: center;
     border-top: 2px solid #444;
     margin-top: 2em;
+    width: 100%;
 }
 
 footer a {
@@ -700,4 +713,52 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 50%; 
     padding: 0.2em; 
     cursor: pointer;
+}
+
+@media (max-width: 1200px) { 
+    main img {
+        width: 100vw; 
+    }
+    #format .container {
+        display: flex;
+        flex-direction: column;
+    }
+    #format .content {
+        width: 100%; 
+    }
+    #schedule table {
+        font-size: 1rem; 
+    }
+    #aboutm6 {
+        width: 90%;
+    }
+     iframe{
+        width: 90%;
+    }
+    .champs {
+        width: 90%;
+    }
+    .wherewatch_container{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+     .wherewatch_container img{
+        width: 80%;
+     }
+    #contact {
+        width: 90%;
+    }
+    #contactForm{
+        width: 90%;
+    }
+    nav li{
+        width: 100%;
+    }
+    nav a{
+        width: 100%;
+        text-align: left;
+        padding: auto;
+    } 
 }
