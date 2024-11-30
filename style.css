@@ -23,6 +23,9 @@ body {
     color: white;
     margin: 0;
     font-size: clamp(20px, 1vw, 1.2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Header Styling */
@@ -161,7 +164,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: #ffff;
     margin-bottom: 1em;
 }
@@ -277,12 +280,12 @@ header ul li {
     margin-bottom: 1em;
 }
 
-#tournaments ul li {
-    list-style: none;
+#tournaments ul {
     display: flex;
     flex-direction: column;
     text-align: left;
     padding: 0.3em;
+    gap: 1em;
 }
 
 #tournaments img {
@@ -292,15 +295,12 @@ header ul li {
     padding: 1em;
 }
 
-
-
 /* Format Section Styling */
 #format {
     margin: 2em auto;
     width: 90%;
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
 #format .container {
@@ -326,6 +326,13 @@ header ul li {
 #format img {
     width: 100%;
     padding: 1em;
+}
+
+iframe{
+    width: 70%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
 }
 
 /* News Section Styling */
@@ -358,33 +365,37 @@ header ul li {
 }
 
 /* Teams Section Styling */
-#teams {
-    padding: 2em 0;
-    text-align: center;
-}
-
 #teams table {
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
     border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#teams th, #teams td {
+    text-align: left;
+    padding: 1em;
+    border: 1px solid #333;
+    white-space: nowrap;
 }
 
 #teams th {
-    text-align: left;
-    padding: 0.8em;
     background-color: #212121;
-    color: white;
-    font-size: 1.2em;
-    border: 2px solid #444;
+    color: #ffcc00;
+    font-weight: bold;
+    border-bottom: 2px solid #444;
+}
+
+#teams tbody tr:hover {
+    background-color: #333;
+    transition: background-color 0.3s ease;
 }
 
 #teams td {
-    text-align: left;
-    padding: 0.5em;
-    border-bottom: 1px solid #444;
-    font-size: 1em;
-    border: 2px solid #444;
+    color: white;
+    border: 1px solid #444;
 }
+
 
 /* Schedule Section Styling */
 #schedule {
@@ -448,7 +459,7 @@ table th, table td {
 }
 
 #aboutm6 p {
-    padding: 0.5em 0;
+    padding: 0.1em 0;
 }
 
 #aboutm6 h2 {
@@ -467,6 +478,9 @@ table th, table td {
     object-fit: cover;
 }
 
+.champs h3 {
+    margin-top: 1em;
+}
 .champs h2 {
     margin-top: 1em;
 }
@@ -534,11 +548,14 @@ footer a:hover {
 
 /* Contact Us Section Styling */
 #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 5em 2em;
     background-color: #121212;
     color: white;
     text-align: center;
-    width: 60%;
+    width: 55%;
 }
 
 #contact img {
@@ -548,19 +565,12 @@ footer a:hover {
     margin: 0 auto;
 }
 
-#contact h1 {
-    font-family: 'limelight';
-    font-size: 2.5em;
-    color: #ffcc00;
-    margin-bottom: 1em;
-}
 
 #contact p {
     font-size: 1.2em;
     margin-bottom: 2em;
     color: #ddd;
 }
-
 
 /* Form Styling */
 #contactForm {
