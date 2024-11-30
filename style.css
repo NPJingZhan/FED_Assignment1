@@ -82,11 +82,10 @@ nav a:hover {
     color: white;
     font-weight: 500;
     font-size: 1.2em;
-    padding-right: 20px; /* Space for the arrow */
+    padding-right: 20px;
     cursor: pointer;
 }
 
-/* Chevron arrow for dropdown indication */
 .menu p::after {
     content: "▼";
     margin-left: 5px;
@@ -114,23 +113,19 @@ nav a:hover {
     transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for show */
 }
 
-/* Menu hover effect for showing submenu */
 .menu:hover .submenu {
     opacity: 1;
     pointer-events: all;
     transform: translateY(0);
-    transition-delay: 0s;  /* Ensure no delay when showing */
+    transition-delay: 0s;
 }
 
-/* Menu active state for hiding instantly */
 .menu.active .submenu {
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-10px); /* Keep it hidden */
-    transition-delay: 0s; /* No transition when hiding */
+    transform: translateY(-10px);
+    transition-delay: 0s;
 }
-
-
 
 /* Main Content Styling */
 main {
@@ -145,6 +140,7 @@ main {
 }
 
 main img {
+    margin-top: 2em;
     width: 100vw;
     height: auto;
     padding-top: 2em;
@@ -212,6 +208,7 @@ header ul li {
 }
 
 .layer img {
+    margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
@@ -335,24 +332,19 @@ header ul li {
 #news {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     width: 80%;
+    text-align: left;
 }
 
 #news h2 {
     color: white
 }
-#news ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-}
 
-#news ul li p {
+#news p {
     padding: 1em 0;
 }
+
 #news img {
     width: 100%;
     height: auto;
@@ -360,7 +352,7 @@ header ul li {
     padding: 1em;
 }
 
-#news ul ul li{
+#news ul li{
     list-style-type: disc;
     padding: 0.3em;
 }
@@ -371,16 +363,14 @@ header ul li {
     text-align: center;
 }
 
-/* Style for the table itself */
 #teams table {
-    margin: 0 auto;  /* Center the table horizontally */
-    width: 90%;  /* Adjust width as needed */
+    margin: 0 auto;
+    width: 90%;
     border-collapse: collapse;
 }
 
-/* Table Header Styling */
 #teams th {
-    text-align: left;  /* Align headers to the left */
+    text-align: left;
     padding: 0.8em;
     background-color: #212121;
     color: white;
@@ -388,21 +378,19 @@ header ul li {
     border: 2px solid #444;
 }
 
-/* Table Data Styling */
 #teams td {
-    text-align: left;  /* Align text in table rows to the left */
-    padding: 0.8em;
+    text-align: left;
+    padding: 0.5em;
     border-bottom: 1px solid #444;
     font-size: 1em;
     border: 2px solid #444;
 }
 
 /* Schedule Section Styling */
-/* Styling for the Schedule Section */
 #schedule {
     padding: 20px;
-    color: #333; /* Dark text for contrast */
-    border-radius: 8px; /* Soft corners for a modern look */
+    color: #333;
+    border-radius: 8px;
     width: 100%;
 }
 
@@ -428,7 +416,7 @@ table {
 
 table th, table td {
     color: white;
-    padding: 12px;
+    padding: 0.5em;
     text-align: center;
     border: 1px solid #ddd; /* Light gray border for table */
     font-size: 1.5rem;
@@ -449,7 +437,7 @@ table th, table td {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 71%;
 }
 
 #aboutm6 img {
@@ -483,7 +471,44 @@ table th, table td {
     margin-top: 1em;
 }
 
+/* Where to watch Styling */
+#wherewatch{
+    width: 80%;
+}
 
+#wherewatch h1 {
+    padding: 0;
+    margin: 0;
+}
+
+#wherewatch img {
+    width: 100%;
+    height: auto;
+    object-fit: fit;
+    margin: 0 auto;
+    padding: 1.5em 0;
+}
+
+.wherewatch_container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.wherewatch_container ul {
+    margin: 0.5em;
+}
+
+.wherewatch_container a {
+    text-decoration: none;
+    color: #ffcc00;
+}
+
+.wherewatch_container a:hover {
+    text-decoration: underline;
+    cursor: pointer
+}
 
 /* Footer Styling */
 footer {
