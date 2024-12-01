@@ -21,7 +21,7 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
-      const offset = 200; // Adjust based on your header height
+      const offset = 200;
       const targetPosition = target.offsetTop - offset;
 
       window.scrollTo({
@@ -33,19 +33,15 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
 
   document.addEventListener("DOMContentLoaded", () => {
     const adjustTextSize = () => {
-        // Set the base size and scaling factors
-        const baseFontSize = 16; // Default font size in pixels
-        const scalingFactor = window.innerWidth / 1000; // Adjust based on viewport width
+        const baseFontSize = 16;
+        const scalingFactor = window.innerWidth / 1000; 
         
-        // Set the adjusted font size
-        const newFontSize = baseFontSize * Math.min(scalingFactor, 1.5); // Cap scaling for very large screens
+        const newFontSize = baseFontSize * Math.min(scalingFactor, 1.5); 
         
-        // Apply to the body or specific elements
         document.body.style.fontSize = `${newFontSize}px`;
 
     };
 
-    // Adjust size on page load and window resize
     adjustTextSize();
     window.addEventListener("resize", adjustTextSize);
 });
