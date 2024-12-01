@@ -6,7 +6,7 @@ Originally, I wanted to make a website for aband but after some time, I got mind
 
 FEATURES
 When clicking on specific tabs, the site would bring you the respective sites/parts of the website.
-
+When hovering over clickable tabs, the colour changes from white to black
  - Feature to Implement
     --> Make one site page for each of the biggest tournaments hosted by GWE (similar to what is done the the M6 World Championship)
     --> Split the contact details into different part eg. General Queries, Business, Job application etc.
